@@ -2,5 +2,5 @@
 
 set -ouex pipefail
 
-python -m pip install --break-system-packages \
+pip-install --break-system-packages \
   jupyterlab

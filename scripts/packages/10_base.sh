@@ -4,8 +4,7 @@ set -ouex pipefail
 
 ln -fs /usr/share/zoneinfo/Europe/Belgrade /etc/localtime
 
-apt-get update
-apt-get install -y \
+apt-install \
   curl \
   git \
   build-essential \

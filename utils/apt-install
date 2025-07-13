@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -ouex pipefail
+
+# update package index
+apt-get update
+
+# install packages
+apt-get install -y $@
+
+# cleanup
+apt-get clean
+rm -rf /var/cache/apt/lists
