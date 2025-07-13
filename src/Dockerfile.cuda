@@ -1,0 +1,9 @@
+FROM scratch AS ctx
+COPY scripts /
+
+FROM nvcr.io/nvidia/cuda:12.9.1-cudnn-devel-ubuntu24.04
+
+RUN \
+  --mount=type=bind,from=ctx,source=/,target=/ctx \
+  bash /ctx/install.sh
+
