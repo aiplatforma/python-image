@@ -5,6 +5,7 @@ on:
     paths:
       - src/Dockerfile
       - scripts/**
+      - utils/**
       - .github/workflows/build-plain.yml
       - .github/workflows/reusable-build.yml
   workflow_dispatch:

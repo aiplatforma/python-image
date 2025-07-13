@@ -3,9 +3,10 @@ on:
     branches:
       - main
     paths:
-      - src/Dockerfile
+      - src/Dockerfile.cuda
       - scripts/**
-      - .github/workflows/build-plain.yml
+      - utils/**
+      - .github/workflows/build-cuda.yml
       - .github/workflows/reusable-build.yml
   workflow_dispatch:
 
