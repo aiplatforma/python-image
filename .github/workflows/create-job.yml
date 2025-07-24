@@ -6,6 +6,7 @@ on:
       - src/Dockerfile
       - scripts/**
       - utils/**
+      - .github/workflows/create-job.yml
   workflow_dispatch:
 
 jobs:
