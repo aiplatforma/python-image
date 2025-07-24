@@ -1,0 +1,26 @@
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - src/Dockerfile
+      - scripts/**
+      - utils/**
+  workflow_dispatch:
+
+jobs:
+  create-job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: aiplatforma/action-jobledger@v0
+        with:
+          name: Python image
+          type: just
+          metadata: |
+            {
+              "recipe": "image-plain",
+              "repository": "${{ github.repository }}",
+              "tag": "main"
+            }
+          api-endpoint: ${{ secrets.JOBLEDGER_API_ENDPOINT }}
+          api-token: ${{ secrets.JOBLEDGER_API_TOKEN }}
