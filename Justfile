@@ -31,3 +31,4 @@ clean TAGSFILE:
   # Clean up the local tags file
 
 image-plain: (build "src/Dockerfile") (tag "src/tags.json") (push "src/tags.json") (clean "src/tags.json")
+image-cuda: (build "src/Dockerfile.cuda") (tag "src/tags.cuda.json") (push "src/tags.cuda.json") (clean "src/tags.cuda.json")

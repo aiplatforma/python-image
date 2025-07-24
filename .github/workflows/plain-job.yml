@@ -1,0 +1,19 @@
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - src/Dockerfile
+      - scripts/**
+      - utils/**
+      - .github/workflows/plain-job.yml
+      - .github/workflows/reusable-job.yml
+  workflow_dispatch:
+
+jobs:
+  create-job:
+    uses: ./.github/workflows/reusable-job.yml
+    secrets: inherit
+    with:
+      name: Python image
+      recipe: image-plain
