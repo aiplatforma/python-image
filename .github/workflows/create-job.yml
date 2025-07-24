@@ -19,7 +19,7 @@ jobs:
           metadata: |
             {
               "recipe": "image-plain",
-              "repository": "${{ github.repository }}",
+              "repository": "aiplatforma.github.com:${{ github.repository }}",
               "tag": "main"
             }
           api-endpoint: ${{ secrets.JOBLEDGER_API_ENDPOINT }}
